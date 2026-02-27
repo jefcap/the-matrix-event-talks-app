@@ -15,11 +15,13 @@ function initCanvas() {
 }
 
 function drawMatrix() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Slightly more trail fading
     ctx.fillRect(0, 0, width, height);
 
-    ctx.fillStyle = '#00FF41';
+    ctx.fillStyle = '#00FF41'; // Standard Matrix Green
     ctx.font = `${fontSize}px monospace`;
+    ctx.shadowBlur = 5; // Added some glow
+    ctx.shadowColor = '#00FF41';
 
     for (let i = 0; i < drops.length; i++) {
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
