@@ -158,6 +158,12 @@ header {
     margin-right: 5px;
 }
 
+.highlight-text {
+    color: #FFF;
+    text-shadow: 0 0 10px #FFF;
+    font-weight: bold;
+}
+
 .description {
     margin-top: 1rem;
     font-size: 0.95rem;

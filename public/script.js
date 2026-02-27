@@ -52,6 +52,12 @@ const formatTime = (minutes) => {
     return `${displayHours}:${mins.toString().padStart(2, '0')} ${ampm}`;
 };
 
+const highlightMatch = (text, term) => {
+    if (!term) return text;
+    const regex = new RegExp(`(${term})`, 'gi');
+    return text.replace(regex, '<span class="highlight-text">$1</span>');
+};
+
 const renderSchedule = (searchTerm = '') => {
     console.log('Rendering schedule with term:', searchTerm);
     scheduleContainer.innerHTML = '';
@@ -94,16 +100,22 @@ const renderSchedule = (searchTerm = '') => {
                 talk.description.toLowerCase().includes(term) ||
                 talk.speakers.some(s => s.toLowerCase().includes(term));
             
+            const displayedSpeakers = talk.speakers.map(s => highlightMatch(s, term)).join(', ');
+            const displayedTitle = highlightMatch(talk.title, term);
+            const displayedCategories = talk.category.map(cat => 
+                `<span class="category-tag">#${highlightMatch(cat, term)}</span>`
+            ).join('');
+
             const talkHtml = `
                 <div class="schedule-item ${isMatch ? 'match' : 'dimmed'}">
                     <div class="item-header">
                         <div class="time">[ ${startTime} - ${endTime} ]</div>
-                        <div class="speakers">> Speakers: ${talk.speakers.join(', ')}</div>
+                        <div class="speakers">> Speakers: ${displayedSpeakers}</div>
                     </div>
-                    <div class="title">${talk.title}</div>
+                    <div class="title">${displayedTitle}</div>
                     <div class="description">${talk.description}</div>
                     <div class="categories">
-                        ${talk.category.map(cat => `<span class="category-tag">#${cat}</span>`).join('')}
+                        ${displayedCategories}
                     </div>
                 </div>
             `;
