@@ -111,7 +111,7 @@ header {
     transform: scale(0.98);
 }
 
-.schedule-item:hover {
+.schedule-item.match {
     border-color: var(--matrix-green);
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
 }
