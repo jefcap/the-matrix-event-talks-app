@@ -1,0 +1,8 @@
+[
+  {"id": 1, "title": "Bypassing WAFs in Modern Web Apps", "speakers": ["Neo", "Trinity"], "category": ["Web", "Defense"], "duration": 60, "description": "Analyzing web application firewalls and developing novel evasion techniques for modern cloud environments."},
+  {"id": 2, "title": "Android Malware: Reversing the Unreachable", "speakers": ["Morpheus"], "category": ["Android", "Reverse Engineering"], "duration": 60, "description": "Deep dive into sophisticated Android malware that uses advanced anti-analysis and obfuscation techniques."},
+  {"id": 3, "title": "IoT Botnets: The Rise of the Machines", "speakers": ["Agent Smith"], "category": ["IoT", "Attack"], "duration": 60, "description": "Exploring the rapid evolution of IoT botnets and the large-scale DDoS attacks that threaten infrastructure."},
+  {"id": 4, "title": "iOS Kernel Exploitation: Escaping the Sandbox", "speakers": ["The Oracle"], "category": ["iOS", "Exploitation"], "duration": 60, "description": "An technical analysis of recent iOS kernel vulnerabilities and the chain required to achieve full device control."},
+  {"id": 5, "title": "Defending the Matrix: Zero Trust Architecture", "speakers": ["Niobe"], "category": ["Defense", "Architecture"], "duration": 60, "description": "Strategies for implementing a robust Zero Trust framework to protect critical data in highly hostile networks."},
+  {"id": 6, "title": "Social Engineering: Hiding in Plain Sight", "speakers": ["Cypher"], "category": ["Attack", "Human Factor"], "duration": 60, "description": "Examining the psychological triggers used in advanced phishing and physical entry social engineering campaigns."}
+]
