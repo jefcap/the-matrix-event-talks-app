@@ -8,7 +8,7 @@ A modern, high-aesthetic single-page web application for a 1-day technical confe
 
 - **Matrix Digital Rain:** High-performance background animation using HTML5 Canvas.
 - **Dynamic Timeline:** Automatically calculates a full 1-day schedule (10:00 AM - 5:00 PM).
-- **Smart Filtering:** Instant search highlighting matches while maintaining the visual context of the full schedule.
+- **Enhanced Search & Highlighting:** Instant search by speaker, category, or title with real-time text highlighting and visual dimming.
 - **Responsive Design:** Mobile-first terminal aesthetic that works on all devices.
 - **Backend API:** Lightweight Node.js/Express server providing talk data via JSON.
 
