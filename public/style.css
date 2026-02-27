@@ -183,3 +183,14 @@ footer {
     .item-header { flex-direction: column; }
     .time { margin-top: 0.5rem; }
 }
+
+/* Loading Animation */
+.loading-text::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent; }
+    50% { color: var(--matrix-green); }
+}

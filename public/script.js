@@ -138,8 +138,19 @@ const performSearch = () => {
 const fetchTalks = async () => {
     try {
         console.log('Fetching talks...');
+        // Set loading state
+        scheduleContainer.innerHTML = `
+            <div class="schedule-item">
+                <div class="title loading-text">> INITIALIZING_DECRYPTION_PROTOCOL</div>
+            </div>
+        `;
+        
         const response = await fetch('/api/talks');
         if (!response.ok) throw new Error('Network response was not ok');
+        
+        // Simulating a short delay so the loading state is actually visible
+        await new Promise(resolve => setTimeout(resolve, 800)); 
+
         allTalks = await response.json();
         console.log('Talks loaded:', allTalks.length);
         renderSchedule();
